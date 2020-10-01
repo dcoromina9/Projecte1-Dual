@@ -15,28 +15,8 @@
   
   const auth = firebase.auth();
 
-
-
-function login(){
-
-  var userMail = document.getElementById("userMail").value;
-  var password = document.getElementById("password").value;
-
-  firebase.auth().signInWithEmailAndPassword(userMail, password).catch(function(error) {
-    alert(errorMessage);
-  });
-  console.log("aki");
-  document.getElementById("userMail").nodeValue = "";
-  document.getElementById("password").nodeValue = "";
-  
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      location.replace("../index.html");
-    } else {
-      alert("Email or password incorrect");
-    }
-  });
-  
- 
-
-}
+  function log_out(){
+      location.replace("./login/login.html");
+      auth.signOut();
+      alert("signed Out");
+  }
