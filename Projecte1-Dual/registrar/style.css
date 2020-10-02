@@ -1,0 +1,172 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+  color: yellowgreen;
+  opacity: 0.7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("../imgs/forestwall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Full height */
+  height:100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+  height:auto;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+button{
+	width:120px;
+	height:30px;
+  border-radius:5px;
+}
+button:hover {
+  transition: all 0.8s;
+
+}
+
+a{
+  color: rgba(154, 205, 50,0.5);
+	font-size:medium;
+	text-decoration:none;
+}
+a:hover,
+a:focus{
+  color: yellowgreen;
+  outline: none;
+}
+
+.form{
+  margin: auto auto;
+  width: auto;
+  height: auto;
+}
+
+
+input{
+  font-size: medium;
+  height:40px;
+  margin-bottom: 20px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid yellowgreen;
+  outline: none;
+  padding: 10px;
+  color: white;
+  transition: all 0.8s;
+}
+::placeholder{
+  color: white;
+  opacity: 0.7;
+
+}
+
+input:focus{
+  border: 1px solid yellowgreen;
+
+}
+
+#btnSubmit{
+  background: none;
+  color: yellowgreen; 
+  border: 1px solid yellowgreen;
+}
+#btnSubmit:hover,
+#btnSubmit:focus{
+  background: rgba(154, 205, 50,0.5) ;
+  color: white;
+  outline: none;
+}
+#btnSubmit:active{
+  transform: scale(0.94);
+}
+
+
+/* BUBBLES */
+
+.bubbles{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  top:0;
+  left: 0;
+}
+
+.bubble{
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.5;
+  background: rgb(196,251,63);
+  background: radial-gradient(circle, rgba(196,251,63,1) 0%, rgba(48,126,32,1) 100%);
+  animation: flyingOne 10s infinite ease-in;
+}
+
+.bubble:nth-child(1){   width: 30px;  height: 30px;  left: 10%;   animation-duration: 20s;}
+.bubble:nth-child(2){   width: 27px;  height: 27px;  left: 24%;   animation-duration: 17s;}
+.bubble:nth-child(3){   width: 15px;  height: 15px;  left: 5%;    animation-duration: 8s;}
+.bubble:nth-child(4){   width: 23px;  height: 23px;  left: 12%;   animation-duration: 12s;}
+.bubble:nth-child(5){   width: 12px;  height: 12px;  right: 10%;  animation-duration: 9s;}
+.bubble:nth-child(6){   width: 15px;  height: 15px;  right: 15%;  animation-duration: 14s;}
+.bubble:nth-child(7){   width: 25px;  height: 25px;  right: 5%;   animation-duration: 13s;}
+.bubble:nth-child(8){   width: 18px;  height: 18px;  right: 18%;  animation-duration: 17s;}
+.bubble:nth-child(9){   width: 18px;  height: 18px;  right: 42%;  animation-duration: 12s;}
+.bubble:nth-child(10){  width: 7px;   height: 7px;   right: 51%;  animation-duration: 12s;}
+.bubble:nth-child(11){  width: 10px;  height: 10px;  right: 48%;  animation-duration: 14s;}
+.bubble:nth-child(12){  width: 5px;   height: 5px;   right: 45%;  animation-duration: 8s;}
+.bubble:nth-child(13){  width: 7px;   height: 7px;   right: 45%;  animation-duration: 7s;}
+.bubble:nth-child(14){  width: 6px;   height: 6px;   right: 45%;  animation-duration: 8s;}
+.bubble:nth-child(15){  width: 5px;   height: 5px;   right: 46%;  animation-duration: 5s;}
+.bubble:nth-child(16){  width: 5px;   height: 5px;   right: 55%;  animation-duration: 6s;}
+.bubble:nth-child(17){  width: 8px;   height: 8px;   right: 43%;  animation-duration: 8s;}
+.bubble:nth-child(18){  width: 3px;   height: 3px;   right: 53%;  animation-duration: 9s;}
+.bubble:nth-child(19){  width: 5px;   height: 5px;   right: 52%;  animation-duration: 7s;}
+.bubble:nth-child(20){  width: 4px;   height: 4px;   right: 57%;  animation-duration: 7s;}
+
+
+@keyframes flyingOne{
+
+  0%{
+    bottom: -100px;
+    transform:  translateX(0);
+  }
+  50%{
+    transform: translateX(100px);
+  }
+  100%{
+    bottom: 1080px;
+    transform: translateX(0);
+  }
+}
+
+    
