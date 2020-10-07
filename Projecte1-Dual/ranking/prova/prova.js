@@ -22,7 +22,7 @@ function gotData (data) {
     var keys = Object.keys(scores);
     for ( var i = 0; i < keys.length; i++ ){
         var k = keys[i];
-        var punts = scores[k].points;
+        var correo = scores[k].points;
         var nombre = scores[k].userName;
 
         var tBody = document.getElementById('dataTable').lastElementChild;
@@ -32,7 +32,7 @@ function gotData (data) {
         dato1.innerText = nombre;
         tr1.appendChild(dato1);
         var dato2 = document.createElement('td');
-        dato2.innerText = punts;
+        dato2.innerText = correo;
         tr1.appendChild(dato2);
         var dato3 = document.createElement('td');
     };
@@ -43,3 +43,22 @@ function errData (err) {
     console.log(err);
 }
 
+var boton = document.getElementById('btn');
+
+boton.addEventListener('click', descargarExcel);
+
+function descargarExcel() {
+    //Creamos un Elemento Temporal en forma de enlace
+    var tmpElemento = document.createElement('a');
+    // obtenemos la información desde el div que lo contiene en el html
+    // Obtenemos la información de la tabla
+    var data_type = 'data:application/vnd.ms-excel';
+    var tabla_div = document.getElementById('dataTable');
+    var tabla_html = tabla_div.outerHTML.replace(/ /g, '%20');
+    tmpElemento.href = data_type + ', ' + tabla_html;
+    var nombreExcel = document.getElementById('nameDownload').value;
+    //Asignamos el nombre a nuestro EXCEL
+    tmpElemento.download = nombreExcel + '.xls';
+    // Simulamos el click al elemento creado para descargarlo
+    tmpElemento.click();
+}
