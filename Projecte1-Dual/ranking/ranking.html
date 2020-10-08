@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-  <title>3 EN RATLLA</title>
+  <title>RANKING</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
-  <script src="login.js" ></script>
+   <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase-database.js"></script>
+  <script src="ranking.js"></script>
+  
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -39,18 +41,20 @@
 
 <div class="bg-text">
 
-      <h2>3 EN RATLLA</h2>
-      <br>
-      <input id="userMail" type="text" placeholder="Login" size="25" >
-      <br><br>
-      <input id="password"  type="password" placeholder="Password" size="25" >
-      <br><br>
-
-      <button id="btnSubmit" onclick="login()" type="submit">Log In</button>
-      <br></br>
-      <a href="../registrar/registrar.html">Don't have an account? Sign Up</a>
+      <h2>RANKING</h2>
+	  <div>
+<table id="dataTable">
+  <thead>
+     <th>Nom</th><th>Punts</th>
+  </thead>
+  <tbody></tbody>
+</table>
+	  </div>
+      <a href="#joc">Tornar a Jugar</a>
 
 </div>
 </div>
+
+
 </body>
 </html>

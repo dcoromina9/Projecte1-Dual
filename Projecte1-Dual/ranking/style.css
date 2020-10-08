@@ -68,6 +68,15 @@ button:hover {
 
 }
 
+thead th{
+	font-size:20px;
+	padding: 2%;
+}
+
+#dataTable{
+	width: 100%;
+	padding:5%;
+}
 
 a{
   color: rgba(154, 205, 50,0.5);
