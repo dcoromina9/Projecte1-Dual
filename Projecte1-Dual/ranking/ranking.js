@@ -24,7 +24,7 @@ function gotData (data) {
         var k = keys[i];
         var punts = scores[k].points;
         var nombre = scores[k].userName;
-
+		
         var tBody = document.getElementById('dataTable').lastElementChild;
         var tr1 = document.createElement('tr');
         tBody.appendChild(tr1);
