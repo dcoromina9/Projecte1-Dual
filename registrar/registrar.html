@@ -40,14 +40,17 @@
       <br>
         <input id="userMail" type="text" placeholder="Email" size="25" required autocomplete="off"><br>
         <input id="username" type="text" placeholder="User Name" size="25" required autocomplete="off"><br>
-        <input id="password"  type="password" placeholder="Password" size="25" required> <br>
+        <input id="password"  type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" size="25" required> <br>
         <input id="repeat_password"  type="password" placeholder="Repeat Password" size="25" required> <br>
+        <p>Use 6 or more characters with a combination of Uppercase, Lowercase letters and numbers</p>
         <button id="btnSubmit" onclick="register()" type="submit">Sign Up</button>
+
         <br></br>
         <a href="../login/login.html">Already have an account? Log In</a>
       </div>
     </div>
-  </div>
+
+    </div>
 
 
 </body>

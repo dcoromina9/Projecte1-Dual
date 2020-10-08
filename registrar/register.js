@@ -14,19 +14,42 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
 
-    function register(){
+      function register(){
       var email = document.getElementById("userMail").value;
       var password = document.getElementById("password").value;
-
+      checkpassword();
       const newUser = auth.createUserWithEmailAndPassword(email, password);
+
       newUser.catch(e => alert(e.message));
 
       document.getElementById("userMail").value = "";
       document.getElementById("password").value = "";
-    
+
     }
 
+    function checkpassword(){
 
+      password1 = document.getElementById("password").value;
+      password2 = document.getElementById("repeat_password").value;
+      var regularExpression = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{6,}$/;
+      if(!regularExpression.test(password1)){
+        alert("Use 6 or more characters with a combination of Uppercase, Lowercase letters and numbers")
+      }
 
+        else if (password1 == ''){
+          alert("Please enter Password.")
+        }
+        else if (password2 == '') {
+          alert("Please enter confirm Password.")
+        }
+        else if (password1 != password2) {
+          alert("\nPassword did not match: Please try again...")
+          return false;
 
+        }
+        else{
+          alert("Password Match: Welcome!")
+          return true;
+        }
 
+    }
