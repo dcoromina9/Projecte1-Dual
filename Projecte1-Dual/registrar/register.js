@@ -24,7 +24,7 @@ const db = firebase.database();
       var email = document.getElementById("userMail").value;
       var password = document.getElementById("password").value;
       var name = document.getElementById("username").value;
-      validar();
+      if(validar()){
       const newUser = auth.createUserWithEmailAndPassword(email, password).then(e => {
         firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
           alert(errorMessage);
@@ -46,7 +46,8 @@ const db = firebase.database();
           }
         });
 
-      });
+      });        
+      }
       newUser.catch(e => alert(e.message));
 
       document.getElementById("userMail").value = "";
@@ -61,11 +62,15 @@ const db = firebase.database();
       var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
 
       if (!password.value.match(passw)){
-        alert("Use 6 or more characters with a combination of Uppercase, Lowercase letters and numbers")
+        alert("Use 6 or more characters with a combination of Uppercase, Lowercase letters and numbers");
+        return false;
       }
       else if(!password.value.match(repeat_password.value)){
-        alert("Password doesn't match")
+        alert("Password doesn't match");
+        return false;
       }else{
         alert("Welcome")
+        return true;
       }
+      return false;
     }
