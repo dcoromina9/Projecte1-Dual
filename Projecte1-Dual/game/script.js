@@ -45,11 +45,11 @@ function myFunction1() {
 
 
     if (turn) {
-      document.getElementById("cell1").style.backgroundImage = "url('x.png')";
+      document.getElementById("cell1").style.backgroundImage = "url('../imgs/x.png')";
       cell1 = "X";
     }
     else {
-      document.getElementById("cell1").style.backgroundImage = "url('o.png')";
+      document.getElementById("cell1").style.backgroundImage = "url('../imgs/o.png')";
       cell1 = "O";
     }
     if (turn) {
@@ -72,11 +72,11 @@ function myFunction2() {
   if (occupied[1] != "T") {
 
   if (turn) {
-    document.getElementById("cell2").style.backgroundImage = "url('x.png')";
+    document.getElementById("cell2").style.backgroundImage = "url('../imgs/x.png')";
     cell2 = "X";
   }
   else {
-    document.getElementById("cell2").style.backgroundImage = "url('o.png')";
+    document.getElementById("cell2").style.backgroundImage = "url('../imgs/o.png')";
     cell2 = "O";
   }
   if (turn) {
@@ -99,12 +99,12 @@ function myFunction3() {
   if (occupied[2] != "T") {
 
   if (turn) {
-    document.getElementById("cell3").style.backgroundImage = "url('x.png')";
+    document.getElementById("cell3").style.backgroundImage = "url('../imgs/x.png')";
     cell3 = "X";
 
   }
   else {
-    document.getElementById("cell3").style.backgroundImage = "url('o.png')";
+    document.getElementById("cell3").style.backgroundImage = "url('../imgs/o.png')";
     cell3 = "O";
   }
   if (turn) {
@@ -126,11 +126,11 @@ function myFunction4() {
   if (occupied[3] != "T") {
 
   if (turn) {
-    document.getElementById("cell4").style.backgroundImage = "url('x.png')";
+    document.getElementById("cell4").style.backgroundImage = "url('../imgs/x.png')";
     cell4 = "X";
   }
   else {
-    document.getElementById("cell4").style.backgroundImage = "url('o.png')";
+    document.getElementById("cell4").style.backgroundImage = "url('../imgs/o.png')";
     cell4 = "O";
   }
   if (turn) {
@@ -152,11 +152,11 @@ function myFunction5() {
   if (occupied[4] != "T") {
 
   if (turn) {
-    document.getElementById("cell5").style.backgroundImage = "url('x.png')";
+    document.getElementById("cell5").style.backgroundImage = "url('../imgs/x.png')";
     cell5 = "X";
   }
   else {
-    document.getElementById("cell5").style.backgroundImage = "url('o.png')";
+    document.getElementById("cell5").style.backgroundImage = "url('../imgs/o.png')";
     cell5 = "O";
   }
   if (turn) {
@@ -178,11 +178,11 @@ function myFunction6() {
   if (occupied[5] != "T") {
 
   if (turn) {
-    document.getElementById("cell6").style.backgroundImage = "url('x.png')";
+    document.getElementById("cell6").style.backgroundImage = "url('../imgs/x.png')";
     cell6 = "X";
   }
   else {
-    document.getElementById("cell6").style.backgroundImage = "url('o.png')";
+    document.getElementById("cell6").style.backgroundImage = "url('../imgs/o.png')";
     cell6 = "O";
   }
   if (turn) {
@@ -204,12 +204,12 @@ function myFunction7() {
   if (occupied[6] != "T") {
 
   if (turn) {
-    document.getElementById("cell7").style.backgroundImage = "url('x.png')";
+    document.getElementById("cell7").style.backgroundImage = "url('../imgs/x.png')";
     cell7 = "X";
     
   }
   else {
-    document.getElementById("cell7").style.backgroundImage = "url('o.png')";
+    document.getElementById("cell7").style.backgroundImage = "url('../imgs/o.png')";
     cell7 = "O";
 
   }
@@ -232,11 +232,11 @@ function myFunction8() {
   if (occupied[7] != "T") {
 
   if (turn) {
-    document.getElementById("cell8").style.backgroundImage = "url('x.png')";
+    document.getElementById("cell8").style.backgroundImage = "url('../imgs/x.png')";
     cell8 = "X";
   }
   else {
-    document.getElementById("cell8").style.backgroundImage = "url('o.png')";
+    document.getElementById("cell8").style.backgroundImage = "url('../imgs/o.png')";
     cell8 = "O";
   }
   if (turn) {
@@ -258,11 +258,11 @@ function myFunction9() {
   if (occupied[8] != "T") {
 
   if (turn) {
-    document.getElementById("cell9").style.backgroundImage = "url('x.png')";
+    document.getElementById("cell9").style.backgroundImage = "url('../imgs/x.png')";
     cell9 = "X";
   }
   else {
-    document.getElementById("cell9").style.backgroundImage = "url('o.png')";
+    document.getElementById("cell9").style.backgroundImage = "url('../imgs/o.png')";
     cell9 = "O";
   }
   if (turn) {
