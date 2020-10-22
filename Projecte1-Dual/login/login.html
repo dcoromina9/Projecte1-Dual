@@ -1,56 +1,74 @@
-<!DOCTYPE html>
-<html lang="ca">
-<head>
-  <title>3 EN RATLLA</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
-  <script src="login.js" ></script>
+<?php
+session_start();
+require "requirelanguage.php";
+?>
+    <!DOCTYPE html>
+    <html lang="ca">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title>3 EN RATLLA</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+        <script src="login.js"></script>
 
-</head>
-<body>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="bg-image">
-  <div class="bubbles">
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
+    </head>
 
-</div>
+    <body>
 
-<div class="bg-text">
+        <div class="bg-image">
+            <div class="bubbles">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
 
-      <h2>3 EN RATLLA</h2>
-      <br>
-      <input id="userMail" type="text" placeholder="Login" size="25" >
-      <br><br>
-      <input id="password"  type="password" placeholder="Password" size="25" >
-      <br><br>
+            </div>
 
-      <button id="btnSubmit" onclick="login()" type="submit">Log In</button>
-      <br></br>
-      <a href="../registrar/registrar.html">Don't have an account? Sign Up</a>
+            <div class="idioma">
 
-</div>
-</div>
-</body>
-</html>
+                <img class="band1" src="imatges/es.png">
+
+                <img class="band2" src="imatges/ca.png">
+
+                <img class="band3" src="imatges/en.jpg">
+
+
+            </div>
+
+            <div class="bg-text">
+
+                <h2>3 EN RATLLA</h2>
+                <br>
+                <input id="userMail" type="text" placeholder="Login" size="25">
+                <br><br>
+                <input id="password" type="password" placeholder="Password" size="25">
+                <br><br>
+
+                <button id="btnSubmit" onclick="login()" type="submit">Log In</button>
+                <br></br>
+                <a href="../registrar/registrar.html">Don't have an account? Sign Up</a>
+
+            </div>
+        </div>
+    </body>
+
+    </html>

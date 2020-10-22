@@ -6,9 +6,7 @@ require "requirelanguage.php";
     <html lang="es">
 
     <head>
-        <title>
-            <?php echo $titol;?>
-        </title>
+        <title><?php echo $titol;?></title>
         <link href="style.css" rel="stylesheet">
 
         <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -62,9 +60,7 @@ require "requirelanguage.php";
 
             <div class="bg-text">
                 <div class="form">
-                    <h2>
-                        <?php echo $register;?>
-                    </h2>
+                    <h2><?php echo $register;?></h2>
                     <br>
                     <input id="userMail" type="text" placeholder="Email" size="25" required autocomplete="off"><br>
                     <input id="username" type="text" placeholder="User Name" size="25" required autocomplete="off"><br>
@@ -72,9 +68,7 @@ require "requirelanguage.php";
                     <input id="repeat_password" type="password" placeholder="Repeat Password" size="25" required> <br>
                     <button id="btnSubmit" onclick="register()" type="submit"><?php echo $register;?></button>
                     <br></br>
-                    <a href="../login/login.html">
-                        <?php echo $compteFet;?>
-                    </a>
+                    <a href="../login/login.html"><?php echo $compteFet;?></a>
                 </div>
             </div>
         </div>

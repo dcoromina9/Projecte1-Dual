@@ -113,6 +113,72 @@ input:focus {
     transform: scale(0.94);
 }
 
+.navbar {
+    padding: 15px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: fixed;
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+#propietats {
+    padding: 17px;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.idioma {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 30px;
+}
+
+.band1 {
+    float: right;
+    margin-left: 15px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.band1:hover {
+    opacity: 1;
+}
+
+.band2 {
+    float: right;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.band2:hover {
+    opacity: 1;
+}
+
+.band3 {
+    float: right;
+    margin-right: 15px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.band3:hover {
+    opacity: 1;
+}
+
 
 /* BUBBLES */
 
