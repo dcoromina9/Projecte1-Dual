@@ -188,7 +188,11 @@ function myFunction9() {
     occupied[2][1] == "X" && occupied[4][1] == "X" && occupied[6][1] == "X") {
     window.alert("Has guanyat")
     won = true;
+<<<<<<< HEAD
     window.location.href = "../ranking/ranking.php";
+=======
+    window.location.href = "../ranking/ranking.html";
+>>>>>>> 2af110508073cc54e166142af7b754793d989a09
   }
 
   else if (
@@ -202,12 +206,20 @@ function myFunction9() {
     occupied[2][1] == "O" && occupied[4][1] == "O" && occupied[6][1] == "O") {
     window.alert("Has perdut")
     lost = true
+<<<<<<< HEAD
     window.location.href = "../ranking/ranking.php";
+=======
+    window.location.href = "../ranking/ranking.html";
+>>>>>>> 2af110508073cc54e166142af7b754793d989a09
   } 
 
    else if (rounds == 9 & won == false & lost == false){
     window.alert("Has empetat")
+<<<<<<< HEAD
     window.location.href = "../ranking/ranking.php";
+=======
+    window.location.href = "../ranking/ranking.html";
+>>>>>>> 2af110508073cc54e166142af7b754793d989a09
   }
 }
 
