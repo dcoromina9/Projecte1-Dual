@@ -12,54 +12,70 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-var refDB = firebase.database().ref().child('users');
 
-refDB.on('value', gotData, errData);
 
-function gotData(data) {
+/* ============================ Bubbles ====================== */
+addEventListener("load", function() {
+    for (var i = 0; i <= 20; i++) {
+        var div = document.createElement("div");
+        div.classList.add("bubble");
+        document.getElementById("bubbles").appendChild(div);
+    }
+});
 
-    var points = [];
-    var users = [];
-    var punts = [];
-    var usuaris = [];
-    var sortPunts = [];
-    var sortNoms = [];
-    var database = firebase.database().ref('users');
-    database.on('value', function(snapshot) {
-        snapshot.forEach(element => {
-            users.push(element.val().userName);
-            points.push(element.val().points);
-            usuaris.push(users);
-            punts.push(points);
+var users = [];
+var bests = [];
+var sortBest = [];
+var BreakException = {};
+var limitRank = 0;
+var database = firebase.database().ref('users');
+var img_top1 = document.createElement("img");
+img_top1.src = "../imgs/ranking_img/top1.png";
+img_top1.style.height = "30px";
+img_top1.style.width = "50px";
 
-            points = [];
-            users = [];
-        });
-        sortNoms = usuaris.sort((a, b) => a - b);
-        sortPunts = punts.sort((a, b) => a > b);
 
+
+database.on('value', function(snapshot) {
+    snapshot.forEach(element => {
+        users.push(element.val().userName);
+        users.push(element.val().points);
+        bests.push(users);
+        users = [];
     });
 
+    sortBest = (bests.sort((a, b) => b[1] - a[1]));
 
-    for (var i = 0; i < 3; i++) {
-        var tBody = document.getElementById('dataTable').lastElementChild;
-        var tr1 = document.createElement('tr');
-        tBody.appendChild(tr1);
-        var dato1 = document.createElement('td');
-        dato1.innerText = usuaris[i];
-        tr1.appendChild(dato1);
-        var dato2 = document.createElement('td');
-        dato2.innerText = punts[i];
-        tr1.appendChild(dato2);
+
+    try {
+        sortBest.forEach(element => {
+            limitRank++;
+            var tBody = document.getElementById('dataTable').lastElementChild;
+            var tr1 = document.createElement('tr');
+            tBody.appendChild(tr1);
+            var dato1 = document.createElement('td');
+            dato1.innerText = element[0];
+            tr1.appendChild(dato1);
+            var dato2 = document.createElement('td');
+            dato2.innerText = element[1];
+            tr1.appendChild(dato2);
+
+            if (limitRank == 3) throw BreakException;
+        });
+
+        var user = firebase.auth().currentUser;
+
+        if (user != null) {
+            console.log(user.email + " --- " + user.points);
+        } else {
+            console.log("No user loged In");
+        }
+
+
+
+
+
+    } catch (e) {
+        if (e !== BreakException) throw e;
     }
-
-    console.log(sortPunts);
-
-
-};
-
-
-function errData(err) {
-    console.log('Error!');
-    console.log(err);
-}
+});
